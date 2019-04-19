@@ -30,6 +30,7 @@ private:
     bool is_check_heartbeat_;
 };
 #+END_SRC
+{{{more}}}
 + 在IOThread的线程函数thr_svc中将signalbox的可读事件注册到reactor中，同时注册了定时器，开始了事件循环，如下
 #+BEGIN_SRC c++
 void IOThread::thr_svc(void *args)
