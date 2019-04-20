@@ -79,5 +79,5 @@ theme: landscape
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/fwar34/fwar34.github.io
+  repo: https://github.com/fwar34/hexo.github.io
   branch: master
