@@ -19,17 +19,18 @@ categories:
 <p>
 文章中的标题可以通过 #+TITLE: 来设置标题
 </p>
-<pre class="example">
-#+TITLE: 神器中的神器org-mode之入门篇
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">#<span style="color: #b6a0e0;">+TITLE:</span> <span style="color: #a3e0a0;">&#31070;&#22120;&#20013;&#30340;&#31070;&#22120;org-mode&#20043;&#20837;&#38376;&#31687;</span>
 </pre>
+</div>
 
 <!-- more -->
 </div>
 </div>
 
-<div id="outline-container-org394af40" class="outline-2">
-<h2 id="org394af40">段落</h2>
-<div class="outline-text-2" id="text-org394af40">
+<div id="outline-container-org6bfbcac" class="outline-2">
+<h2 id="org6bfbcac">段落</h2>
+<div class="outline-text-2" id="text-org6bfbcac">
 <p>
 这里与我们想象的很不一样，再win下只要你Enter，就换行成为新的一段了。但是这里要开始新的段落需要回车两次，<br />
 当你回车一次，当你发布时，只相当于中间有个空格而已。还有一种方法就是在需要空格的地方输入\\。 
@@ -44,9 +45,9 @@ categories:
 </div>
 </div>
 
-<div id="outline-container-org64fe1ca" class="outline-2">
-<h2 id="org64fe1ca">字体</h2>
-<div class="outline-text-2" id="text-org64fe1ca">
+<div id="outline-container-org3072c0d" class="outline-2">
+<h2 id="org3072c0d">字体</h2>
+<div class="outline-text-2" id="text-org3072c0d">
 <pre class="example">
 *粗体*
 /斜体/
@@ -119,7 +120,13 @@ c为所添加的语言
 -t 清除格式
 -h 7 设置高度为7 -w 40设置宽度为40
 </pre>
-
+<p>
+所有的快捷字母可以用如下的命令查看
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #9999bb;">M-x</span> <span style="color: #b6a0e0;">describe-variable</span> <span style="color: #AE81FF;">[</span><span style="color: #bb99b4;">RET</span><span style="color: #AE81FF;">]</span> <span style="color: #a3e0a0;">org-structure-template-alist</span>
+</pre>
+</div>
 <ul class="org-ul">
 <li>注释</li>
 </ul>
@@ -206,18 +213,18 @@ LINKHOME: 	HEME: 链接
 </div>
 </div>
 
-<div id="outline-container-orga99aa46" class="outline-2">
-<h2 id="orga99aa46">列表</h2>
-<div class="outline-text-2" id="text-orga99aa46">
+<div id="outline-container-org12ef12c" class="outline-2">
+<h2 id="org12ef12c">列表</h2>
+<div class="outline-text-2" id="text-org12ef12c">
 <ul class="org-ul">
 <li>选项1</li>
 <li>选项2</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbfb3d39" class="outline-2">
-<h2 id="orgbfb3d39">表格</h2>
-<div class="outline-text-2" id="text-orgbfb3d39">
+<div id="outline-container-org6fa28cb" class="outline-2">
+<h2 id="org6fa28cb">表格</h2>
+<div class="outline-text-2" id="text-org6fa28cb">
 <table id="org1270b1f" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -449,9 +456,9 @@ org-mode强大的操作能力源于它对大纲的支持。
 </div>
 </div>
 
-<div id="outline-container-org3072c0d" class="outline-2">
-<h2 id="org3072c0d">字体</h2>
-<div class="outline-text-2" id="text-org3072c0d">
+<div id="outline-container-org952060d" class="outline-2">
+<h2 id="org952060d">字体</h2>
+<div class="outline-text-2" id="text-org952060d">
 <p>
 <b>粗体</b>
 <i>斜体</i>
@@ -464,17 +471,17 @@ org-mode强大的操作能力源于它对大纲的支持。
 </div>
 </div>
 
-<div id="outline-container-org6bfbcac" class="outline-2">
-<h2 id="org6bfbcac">段落</h2>
-<div class="outline-text-2" id="text-org6bfbcac">
+<div id="outline-container-orgabc438c" class="outline-2">
+<h2 id="orgabc438c">段落</h2>
+<div class="outline-text-2" id="text-orgabc438c">
 <p>
 对于单个回车换行的文本，认为其属于同一个段落。在导出的时候将会转化为不换行的同一段。如果要新起一个段落，需要留出一个空行。 这点与markdown类似。
 </p>
 </div>
 </div>
-<div id="outline-container-org6fa28cb" class="outline-2">
-<h2 id="org6fa28cb">表格</h2>
-<div class="outline-text-2" id="text-org6fa28cb">
+<div id="outline-container-orgd9dad3b" class="outline-2">
+<h2 id="orgd9dad3b">表格</h2>
+<div class="outline-text-2" id="text-orgd9dad3b">
 <p>
 Org 能够很容易地处理 ASCII 文本表格。任何以‘|’为首个非空字符的行都会被认为是表格的一部分。’|‘也是列分隔符。一个表格是下面的样子：
 </p>
@@ -701,9 +708,9 @@ S-Enter 可以将上一行cell的数据复制到当前空白的cell中,
 </div>
 </div>
 
-<div id="outline-container-org12ef12c" class="outline-2">
-<h2 id="org12ef12c">列表</h2>
-<div class="outline-text-2" id="text-org12ef12c">
+<div id="outline-container-orgf9b1792" class="outline-2">
+<h2 id="orgf9b1792">列表</h2>
+<div class="outline-text-2" id="text-orgf9b1792">
 </div>
 <div id="outline-container-orgb9f39db" class="outline-3">
 <h3 id="orgb9f39db">Org 能够识别有序列表、无序列表和描述列表。</h3>

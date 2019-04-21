@@ -15,9 +15,9 @@
 
 * 标题
 文章中的标题可以通过 #+TITLE: 来设置标题
-#+BEGIN_EXAMPLE
+#+BEGIN_SRC emacs-lisp
 #+TITLE: 神器中的神器org-mode之入门篇
-#+END_EXAMPLE
+#+END_SRC
 
 #+BEGIN_EXPORT html
 <!-- more -->
@@ -90,7 +90,10 @@ c为所添加的语言
 -t 清除格式
 -h 7 设置高度为7 -w 40设置宽度为40
 #+END_EXAMPLE
-
+所有的快捷字母可以用如下的命令查看
+#+BEGIN_SRC emacs-lisp
+M-x describe-variable [RET] org-structure-template-alist
+#+END_SRC
 + 注释
 以‘#‘开头的行被看作注释，不会被导出区块注释采用如下写法： 
 #+BEGIN_EXAMPLE
