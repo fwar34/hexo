@@ -58,10 +58,10 @@
 (our-remove-if #'evenp '(1 3 4 5 2))
 #+END_SRC 
 
-#+BEGIN_EXAMPLE emacs-lisp
+#+BEGIN_SRC emacs-lisp
 (setq org-src-fontify-natively t)
 (w32-version)
-#+END_EXAMPLE
+#+END_SRC
 ** lambda
 用funcall调用lambda表达式，还可以把lambda赋给一个变量然后在用funcall调用
 #+BEGIN_SRC emacs-lisp
