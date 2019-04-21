@@ -9,9 +9,6 @@ excerpt: lisp的一些学习记录
 categories: 
 - emacs
 ---
-<p>
-+CATEGORIES: org
-</p>
 <div id="outline-container-org31906c6" class="outline-2">
 <h2 id="org31906c6">learn function</h2>
 <div class="outline-text-2" id="text-org31906c6">
@@ -202,9 +199,9 @@ defvar 与 setq 所不同的是，如果变量在声明之前，这个变量已�
 </div>
 </div>
 </div>
-<div id="outline-container-orgaf60554" class="outline-2">
-<h2 id="orgaf60554">函数列表</h2>
-<div class="outline-text-2" id="text-orgaf60554">
+<div id="outline-container-orgd14ae2a" class="outline-2">
+<h2 id="orgd14ae2a">函数列表</h2>
+<div class="outline-text-2" id="text-orgd14ae2a">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #AE81FF;">(</span><span style="color: #F92672;">defun</span> <span style="color: #A6E22E;">NAME</span> <span style="color: #a7c0b9;">ARGLIST</span> <span style="color: #66D9EF;">[</span><span style="color: #c0a7bd;">DOCSTRING</span><span style="color: #66D9EF;">]</span> <span style="color: #a7aac0;">BODY...</span><span style="color: #AE81FF;">)</span>
 <span style="color: #AE81FF;">(</span><span style="color: #F92672;">defvar</span> <span style="color: #FD971F;">SYMBOL</span> <span style="color: #66D9EF;">&amp;optional</span> <span style="color: #bb99b4;">INITVALUE</span> <span style="color: #c0a7bd;">DOCSTRING</span><span style="color: #AE81FF;">)</span>
@@ -229,9 +226,9 @@ defvar 与 setq 所不同的是，如果变量在声明之前，这个变量已�
 <h2 id="orgc38e047">基本数据类型</h2>
 <div class="outline-text-2" id="text-orgc38e047">
 </div>
-<div id="outline-container-orgb4fc660" class="outline-3">
-<h3 id="orgb4fc660">函数列表</h3>
-<div class="outline-text-3" id="text-orgb4fc660">
+<div id="outline-container-org5a45a2a" class="outline-3">
+<h3 id="org5a45a2a">函数列表</h3>
+<div class="outline-text-3" id="text-org5a45a2a">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #75715E;">;; </span><span style="color: #75715E;">&#27979;&#35797;&#20989;&#25968;</span>
 <span style="color: #AE81FF;">(</span><span style="color: #bba699;">integerp</span> <span style="color: #c0afa7;">OBJECT</span><span style="color: #AE81FF;">)</span>
@@ -299,9 +296,9 @@ defvar 与 setq 所不同的是，如果变量在声明之前，这个变量已�
 <a href="http://www.woola.net/detail/2016-08-23-elisp-string.html">http://www.woola.net/detail/2016-08-23-elisp-string.html</a>
 </p>
 </div>
-<div id="outline-container-org76bf4f3" class="outline-3">
-<h3 id="org76bf4f3">测试函数</h3>
-<div class="outline-text-3" id="text-org76bf4f3">
+<div id="outline-container-org9281142" class="outline-3">
+<h3 id="org9281142">测试函数</h3>
+<div class="outline-text-3" id="text-org9281142">
 <p>
 字符串测试使用 stringp，没有 charp，因为字符就是整数。 string-or-null-p 当对象是一个字符或 
 nil 时返回 t。 char-or-string-p 测试是否是字符串或者字符类型。
@@ -314,9 +311,9 @@ nil 时返回 t。 char-or-string-p 测试是否是字符串或者字符类型�
 </div>
 </div>
 </div>
-<div id="outline-container-orgd14ae2a" class="outline-3">
-<h3 id="orgd14ae2a">函数列表</h3>
-<div class="outline-text-3" id="text-orgd14ae2a">
+<div id="outline-container-org395c938" class="outline-3">
+<h3 id="org395c938">函数列表</h3>
+<div class="outline-text-3" id="text-org395c938">
 <p>
 <a href="http://www.woola.net/detail/2016-08-23-elisp-string.html">http://www.woola.net/detail/2016-08-23-elisp-string.html</a>
 </p>
@@ -437,9 +434,9 @@ invalid-function。之所以前面没有遇到这个问题，那是因为前面�
 cons cell 的 CDR 是一个列表呢，还是一个元素或者是嵌套的列表。
 </p>
 </div>
-<div id="outline-container-org9281142" class="outline-3">
-<h3 id="org9281142">测试函数</h3>
-<div class="outline-text-3" id="text-org9281142">
+<div id="outline-container-org53e47bb" class="outline-3">
+<h3 id="org53e47bb">测试函数</h3>
+<div class="outline-text-3" id="text-org53e47bb">
 <p>
 测试一个对象是否是 cons cell 用 consp，是否是列表用 listp。
 </p>

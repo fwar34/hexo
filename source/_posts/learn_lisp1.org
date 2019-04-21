@@ -9,7 +9,6 @@
 #+DESCRIPTION: lisp的一些学习记录
 #+TAGS: lisp emacs
 #+CATEGORIES: emacs
-+CATEGORIES: org
 * learn function
 ** symbol #' and symbol-value symbol-function
 #+BEGIN_SRC emacs-lisp 
