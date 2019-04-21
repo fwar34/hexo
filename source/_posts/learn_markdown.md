@@ -9,6 +9,8 @@ title: Learn markdown
 注：标准语法一般在#后跟个空格再写文字
 > https://www.jianshu.com/p/191d1e21f7ed
 
+<!-- more -->
+
 ```
 # 这是一级标题
 ## 这是二级标题

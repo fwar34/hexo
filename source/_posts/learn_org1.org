@@ -1,9 +1,16 @@
-# -*- org -*- 
-#+TITLE: org-mode 备忘录 
-#+AUTHOR: 
+#+STARTUP: indent
+#+STARTUP: showall
+#+STARTUP: hidestars
 #+STARTUP: content https://www.cnblogs.com/qlwy/archive/2012/06/15/2551034.html
-#+STARTUP: indent 
-#+TODO: TODO STARTED | DONE 
+#+OPTIONS: H:2 num:nil tags:nil toc:nil timestamps:t
+#+LAYOUT: post
+#+AUTHOR: feng
+#+DATE: 2019-04-21 周日 21:47
+#+TITLE: org mode
+#+DESCRIPTION: learn org mode
+#+TAGS: org emacs
+#+CATEGORIES: emacs
+
 <<目录>>
 
 * 标题
@@ -11,6 +18,10 @@
 #+BEGIN_EXAMPLE
 #+TITLE: 神器中的神器org-mode之入门篇
 #+END_EXAMPLE
+
+#+BEGIN_EXPORT html
+<!-- more -->
+#+END_EXPORT
 
 * 段落
 这里与我们想象的很不一样，再win下只要你Enter，就换行成为新的一段了。但是这里要开始新的段落需要回车两次，\\
@@ -112,6 +123,7 @@ c为所添加的语言
   }
   </pre>
   </div>
+#+END_HTML
 #+END_EXAMPLE
 相当于在cnblogs的网页编辑器中插入"c++"代码。 
 
@@ -131,12 +143,6 @@ toc: 	是否生成索引
 creator: 	是否生成 "creat by emacs…"
 LINKUP: 	UP: 链接
 LINKHOME: 	HEME: 链接
-
-
- 
-
-
-
 
 * 列表 
   + 选项1 

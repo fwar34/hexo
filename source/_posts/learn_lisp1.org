@@ -25,6 +25,9 @@
 (setf (symbol-function #'double) #'(lambda(x) (* x 3)))
 (double 3)
 #+END_SRC
+#+BEGIN_EXPORT html
+<!-- more -->
+#+END_EXPORT
 
 ** function call
 下面几个函数调用都是相同的作用，调用了函数+
