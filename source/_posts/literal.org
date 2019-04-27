@@ -55,3 +55,5 @@ literary programming 的意思是文学编程。使用的快捷键是C-c ' 和 C
 
 #+RESULTS:
 : Hello, ob-rust!
+
+<2019-04-27 周六>

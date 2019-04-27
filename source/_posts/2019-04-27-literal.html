@@ -1,0 +1,54 @@
+---
+date: 2019-04-27
+tags: 
+- org literal
+author: feng
+layout: post
+title: Literal
+excerpt: literal in org mode
+categories: 
+- emacs org
+---
+<p>
+literary programming 的意思是文学编程。使用的快捷键是C-c ' 和 C-c C-c
+</p>
+
+<div class="org-src-container">
+<pre class="src src-C++"><span style="color: #F92672;">#include</span> <span style="color: #AE81FF;">&lt;</span><span style="color: #E6DB74;">iostream</span><span style="color: #AE81FF;">&gt;</span>
+<span style="color: #F92672;">#include</span> <span style="color: #AE81FF;">&lt;</span><span style="color: #E6DB74;">vector</span><span style="color: #AE81FF;">&gt;</span>
+
+<span style="color: #66D9EF;">int</span> <span style="color: #A6E22E;">main</span><span style="color: #AE81FF;">()</span> <span style="color: #AE81FF;">{</span>
+    <span style="color: #AE81FF;">std</span>::<span style="color: #66D9EF;">vector</span><span style="color: #66D9EF;">&lt;</span><span style="color: #66D9EF;">uint32_t</span><span style="color: #66D9EF;">&gt;</span> <span style="color: #FD971F;">vec</span> = <span style="color: #66D9EF;">{</span><span style="color: #AE81FF;">1</span>, <span style="color: #AE81FF;">3</span>, <span style="color: #AE81FF;">5</span><span style="color: #66D9EF;">}</span>;
+    <span style="color: #F92672;">for</span> <span style="color: #66D9EF;">(</span><span style="color: #F92672;">auto</span>&amp; <span style="color: #FD971F;">element</span> : <span style="color: #bba699;">vec</span><span style="color: #66D9EF;">)</span> <span style="color: #66D9EF;">{</span>
+        <span style="color: #AE81FF;">std</span>::<span style="color: #a0d6e0;">cout</span> &lt;&lt; <span style="color: #bba699;">element</span> &lt;&lt; <span style="color: #AE81FF;">std</span>::<span style="color: #b3c0a7;">endl</span>;
+    <span style="color: #66D9EF;">}</span>
+
+    <span style="color: #F92672;">return</span> <span style="color: #AE81FF;">0</span>;
+<span style="color: #AE81FF;">}</span>
+</pre>
+</div>
+
+<!-- more -->
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #F92672;">def</span> <span style="color: #A6E22E;">test_literal</span><span style="color: #AE81FF;">(</span><span style="color: #bba699;">name</span><span style="color: #AE81FF;">)</span>:
+    <span style="color: #F92672;">print</span><span style="color: #AE81FF;">(</span><span style="color: #E6DB74;">'Hello'</span>, <span style="color: #bba699;">name</span><span style="color: #AE81FF;">)</span>
+<span style="color: #99bbb4;">test_literal</span><span style="color: #AE81FF;">(</span><span style="color: #E6DB74;">"ob-python"</span><span style="color: #AE81FF;">)</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-go"><span style="color: #b6a0e0;">fmt</span>.<span style="color: #A6E22E;">Println</span><span style="color: #AE81FF;">(</span><span style="color: #E6DB74;">"Hello, ob-go"</span><span style="color: #AE81FF;">)</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-rust"><span style="color: #F92672;">fn</span> <span style="color: #A6E22E;">main</span><span style="color: #AE81FF;">()</span> <span style="color: #AE81FF;">{</span>
+    <span style="color: #F92672;">println!</span><span style="color: #66D9EF;">(</span><span style="color: #E6DB74;">"Hello, ob-rust!"</span><span style="color: #66D9EF;">)</span>;
+<span style="color: #AE81FF;">}</span>
+</pre>
+</div>
+
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2019-04-27 周六&gt;</span></span>
+</p>
