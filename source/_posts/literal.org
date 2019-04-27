@@ -1,0 +1,57 @@
+#+STARTUP: showall
+#+STARTUP: hidestars
+#+OPTIONS: H:2 num:nil tags:nil toc:nil timestamps:t
+#+LAYOUT: post
+#+AUTHOR: feng
+#+DATE: 2019-04-27 周六 09:57
+#+TITLE: Literal
+#+DESCRIPTION: literal in org mode
+#+TAGS: org literal
+#+CATEGORIES: emacs org
+
+literary programming 的意思是文学编程。使用的快捷键是C-c ' 和 C-c C-c
+
+#+BEGIN_SRC C++
+  #include <iostream>
+  #include <vector>
+
+  int main() {
+      std::vector<uint32_t> vec = {1, 3, 5};
+      for (auto& element : vec) {
+          std::cout << element << std::endl;
+      }
+
+      return 0;
+  }
+#+END_SRC
+
+#+RESULTS:
+
+#+BEGIN_EXPORT html
+<!-- more -->
+#+END_EXPORT
+
+#+BEGIN_SRC python :results output
+  def test_literal(name):
+      print('Hello', name)
+  test_literal("ob-python")
+#+END_SRC
+
+#+RESULTS:
+: Hello ob-python
+
+#+BEGIN_SRC go :imports "fmt"
+  fmt.Println("Hello, ob-go")
+#+END_SRC
+
+#+RESULTS:
+: Hello, ob-go
+
+#+BEGIN_SRC rust :results verbatim
+  fn main() {
+      println!("Hello, ob-rust!");
+  }
+#+END_SRC
+
+#+RESULTS:
+: Hello, ob-rust!
