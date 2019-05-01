@@ -1,0 +1,52 @@
+#+STARTUP: showall
+#+STARTUP: hidestars
+#+OPTIONS: H:2 num:nil tags:nil toc:nil timestamps:t
+#+LAYOUT: post
+#+AUTHOR: feng
+#+DATE: 2019-05-01 三 19:53
+#+TITLE: Ubuntu设置Caps Lock为Ctrl键
+#+DESCRIPTION: Ubuntu中将Caps Lock设置为Ctrl
+#+TAGS: ubuntu linux
+#+CATEGORIES: lilnux
+
+https://traceflight.github.io/tech/modify-caps-lock-to-ctrl.html
+
+** 最简单方法
+在/etc/default/keyboard文件中添加
+#+BEGIN_SRC shell
+  XKBOPTIONS="ctrl:nocaps"
+#+END_SRC
+重启后就可以实现将Caps Lock替换为Ctrl键
+
+** 其他方法
+*查看当前键盘布局*
+#+BEGIN_SRC shell
+  xmodmap -pke
+  ...
+  keycode  59 = comma less comma less
+  keycode  60 = period greater period greater
+  keycode  61 = slash question slash question
+  keycode  62 = Shift_R NoSymbol Shift_R
+  keycode  63 = KP_Multiply KP_Multiply KP_Multiply KP_Multiply KP_Multiply KP_Multiply XF86ClearGrab
+  keycode  64 = Alt_L Meta_L Alt_L Meta_L
+  keycode  65 = space NoSymbol space
+  keycode  66 = Caps_Lock NoSymbol Caps_Lock
+  keycode  67 = F1 F1 F1 F1 F1 F1 XF86Switch_VT_1
+  ...
+#+END_SRC
+通常keycode 66对应Caps Lock键
+
+*** 使用自定义键盘布局
+*下面的方法我正在使用(kubuntu18.04)*
+创建一个键盘布局文件（如~/.Xmodmap）:
+#+BEGIN_SRC shell
+  xmodmap -pke > ~/.Xmodmap 
+#+END_SRC
+将其中的keycode 66对应的值改为keycode 66 = Control_L NoSymbol Control_L。然后用自定义文件生效:
+#+BEGIN_SRC shell
+  xmodmap ~/.Xmodmap 
+#+END_SRC
+
+其他剩余的方法之间看上面引用的文章地址或者有道笔记中也有记录
+
+<2019-05-01 三>

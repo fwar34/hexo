@@ -1,0 +1,86 @@
+---
+date: 2019-05-01
+tags: 
+- ubuntu linux
+author: feng
+layout: post
+title: Ubuntu设置Caps Lock为Ctrl键
+excerpt: Ubuntu中将Caps Lock设置为Ctrl
+categories: 
+- lilnux
+---
+<p>
+<a href="https://traceflight.github.io/tech/modify-caps-lock-to-ctrl.html">https://traceflight.github.io/tech/modify-caps-lock-to-ctrl.html</a>
+</p>
+
+<div id="outline-container-org50fab23" class="outline-2">
+<h2 id="org50fab23">最简单方法</h2>
+<div class="outline-text-2" id="text-org50fab23">
+<p>
+在/etc/default/keyboard文件中添加
+</p>
+<div class="org-src-container">
+<pre class="src src-shell"><span style="color: #FD971F;">XKBOPTIONS</span>=<span style="color: #E6DB74;">"ctrl:nocaps"</span>
+</pre>
+</div>
+<p>
+重启后就可以实现将Caps Lock替换为Ctrl键
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgad501af" class="outline-2">
+<h2 id="orgad501af">其他方法</h2>
+<div class="outline-text-2" id="text-orgad501af">
+<p>
+<b>查看当前键盘布局</b>
+</p>
+<div class="org-src-container">
+<pre class="src src-shell"><span style="color: #bba699;">xmodmap</span> <span style="color: #e0a0bc;">-pke</span>
+<span style="color: #9999bb;">...</span>
+<span style="color: #a3e0a0;">keycode</span>  <span style="color: #AE81FF;">59</span> = <span style="color: #bb99b4;">comma</span> <span style="color: #bb99b4;">less</span> <span style="color: #bb99b4;">comma</span> <span style="color: #bb99b4;">less</span>
+<span style="color: #a3e0a0;">keycode</span>  <span style="color: #AE81FF;">60</span> = <span style="color: #e0d0a0;">period</span> <span style="color: #a6bb99;">greater</span> <span style="color: #e0d0a0;">period</span> <span style="color: #a6bb99;">greater</span>
+<span style="color: #a3e0a0;">keycode</span>  <span style="color: #AE81FF;">61</span> = <span style="color: #b3c0a7;">slash</span> <span style="color: #bb99b4;">question</span> <span style="color: #b3c0a7;">slash</span> <span style="color: #bb99b4;">question</span>
+<span style="color: #a3e0a0;">keycode</span>  <span style="color: #AE81FF;">62</span> = <span style="color: #bba699;">Shift_R</span> <span style="color: #a7c0b9;">NoSymbol</span> <span style="color: #bba699;">Shift_R</span>
+<span style="color: #a3e0a0;">keycode</span>  <span style="color: #AE81FF;">63</span> = <span style="color: #bb99b4;">KP_Multiply</span> <span style="color: #bb99b4;">KP_Multiply</span> <span style="color: #bb99b4;">KP_Multiply</span> <span style="color: #bb99b4;">KP_Multiply</span> <span style="color: #bb99b4;">KP_Multiply</span> <span style="color: #bb99b4;">KP_Multiply</span> <span style="color: #bb99b4;">XF86ClearGrab</span>
+<span style="color: #a3e0a0;">keycode</span>  <span style="color: #AE81FF;">64</span> = <span style="color: #bb99b4;">Alt_L</span> <span style="color: #a3e0a0;">Meta_L</span> <span style="color: #bb99b4;">Alt_L</span> <span style="color: #a3e0a0;">Meta_L</span>
+<span style="color: #a3e0a0;">keycode</span>  <span style="color: #AE81FF;">65</span> = <span style="color: #bb99b4;">space</span> <span style="color: #a7c0b9;">NoSymbol</span> <span style="color: #bb99b4;">space</span>
+<span style="color: #a3e0a0;">keycode</span>  <span style="color: #AE81FF;">66</span> = <span style="color: #e0a0bc;">Caps_Lock</span> <span style="color: #a7c0b9;">NoSymbol</span> <span style="color: #e0a0bc;">Caps_Lock</span>
+<span style="color: #a3e0a0;">keycode</span>  <span style="color: #AE81FF;">67</span> = <span style="color: #b6a0e0;">F1</span> <span style="color: #b6a0e0;">F1</span> <span style="color: #b6a0e0;">F1</span> <span style="color: #b6a0e0;">F1</span> <span style="color: #b6a0e0;">F1</span> <span style="color: #b6a0e0;">F1</span> <span style="color: #a7c0b9;">XF86Switch_VT_1</span>
+<span style="color: #9999bb;">...</span>
+</pre>
+</div>
+<p>
+通常keycode 66对应Caps Lock键
+</p>
+</div>
+
+<div id="outline-container-org1947fae" class="outline-3">
+<h3 id="org1947fae">使用自定义键盘布局</h3>
+<div class="outline-text-3" id="text-org1947fae">
+<p>
+<b>下面的方法我正在使用(kubuntu18.04)</b>
+创建一个键盘布局文件（如~/.Xmodmap）:
+</p>
+<div class="org-src-container">
+<pre class="src src-shell"><span style="color: #bba699;">xmodmap</span> <span style="color: #e0a0bc;">-pke</span> &gt; <span style="color: #99bbb4;">~/.Xmodmap</span> 
+</pre>
+</div>
+<p>
+将其中的keycode 66对应的值改为keycode 66 = Control<sub>L</sub> NoSymbol Control<sub>L</sub>。然后用自定义文件生效:
+</p>
+<div class="org-src-container">
+<pre class="src src-shell"><span style="color: #bba699;">xmodmap</span> <span style="color: #99bbb4;">~/.Xmodmap</span> 
+</pre>
+</div>
+
+<p>
+其他剩余的方法之间看上面引用的文章地址或者有道笔记中也有记录
+</p>
+
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2019-05-01 三&gt;</span></span>
+</p>
+</div>
+</div>
+</div>
