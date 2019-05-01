@@ -18,6 +18,10 @@ https://traceflight.github.io/tech/modify-caps-lock-to-ctrl.html
 #+END_SRC
 重启后就可以实现将Caps Lock替换为Ctrl键
 
+#+BEGIN_EXPORT html
+<!-- more -->
+#+END_EXPORT
+
 ** 其他方法
 *查看当前键盘布局*
 #+BEGIN_SRC shell
